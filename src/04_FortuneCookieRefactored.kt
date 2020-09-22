@@ -7,6 +7,11 @@ fun main(args: Array<String>) {
     }
 }
 
+fun getBirthday(): Int{
+    println("\nEnter your birthday: ")
+    return readLine()?.toIntOrNull() ?: 1
+}
+
 fun getFortuneCookie(birthday : Int): String{
     var fortunes = listOf("You will have a great day!",
         "Things will go well for you today.",
@@ -22,9 +27,4 @@ fun getFortuneCookie(birthday : Int): String{
         else -> birthday.rem(fortunes.size)
     }
     return fortunes[index]
-}
-
-fun getBirthday(): Int{
-    println("\nEnter your birthday: ")
-    return readLine()?.toIntOrNull() ?: 1
 }
